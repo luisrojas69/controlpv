@@ -85,67 +85,7 @@
         </li>
 
         <!-- Insumos -->
-
-        <li class="treeview {{ Request::is('supplies*') ? 'active menu-open' : ''}}">
-          <a href="#">
-            <i class="fa fa-shopping-cart"></i> <span>Insumos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ Request::is('supplies/crop') ? 'active' : ''}}"><a href="{{ route('crop.index') }}"><i class="fa fa-leaf"></i>Cultivos</a></li>
-
-            <li class="{{ Request::is('supplies/variety') ? 'active' : ''}}"><a href="{{ route('variety.index') }}"><i class="fa fa-asterisk"></i>Variedades</a></li>
-
-            <li class="{{ Request::is('supplies/fertilizer') ? 'active' : ''}}"><a href="{{ route('fertilizer.index') }}"><i class="fa fa-asterisk"></i>Fertilizantes</a></li>
-          </ul>
-        </li>
-     
-
-        <!-- END Insumos-->
-     
-
-
-         <li class="treeview {{ Request::is('crop*') ? 'active' : ''}}">
-          <a href="#">
-            <i class="fa fa-leaf"></i> <span>Cultivos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ Request::is('crop/create') ? 'active' : ''}}"><a href="{{ route('crop.create') }}"><i class="fa fa-plus"></i> Crear Cultivo</a></li>
-            <li class="{{ Request::is('crop') ? 'active' : ''}}"><a href="{{ route('crop.index') }}"><i class="fa fa-list"></i> Lista de Cultivos</a></li>
-          </ul>
-        </li>               
-
-
-         <li class="treeview {{ Request::is('variety*') ? 'active' : ''}}">
-          <a href="#">
-            <i class="fa fa-asterisk"></i> <span>Variedades</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ Request::is('variety/create') ? 'active' : ''}}"><a href="{{ route('variety.create') }}"><i class="fa fa-plus"></i> Crear Variedad</a></li>
-            <li class="{{ Request::is('variety') ? 'active' : ''}}"><a href="{{ route('variety.index') }}"><i class="fa fa-list"></i> Lista de Variedades</a></li>
-          </ul>
-        </li>
-
-         <li class="treeview {{ Request::is('activity*') ? 'active' : ''}}">
-          <a href="#">
-            <i class="fa fa- fa-tasks"></i> <span>Actividades</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{ Request::is('activity/create') ? 'active' : ''}}"><a href="{{ route('activity.create') }}"><i class="fa fa-plus"></i> Crear Actividad</a></li>
-            <li class="{{ Request::is('activitity') ? 'active' : ''}}"><a href="{{ route('activity.index') }}"><i class="fa fa-list"></i> Lista de Actividades</a></li>
-          </ul>
-        </li>        
+       
         @endif
         <li class="treeview {{ Request::is('pluviometry*') ? 'active' : ''}}">
           <a href="#">

@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('control', 'ControlController');
+Route::get('/', 'HomeController@index');
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('control', 'ControlController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home/lastmonths', 'HomeController@lastmonths');
+
+Route::get('home/allmonths', 'HomeController@allmonths');
+
+Route::get('home/between2dates/{start}/{end}', 'HomeController@between2dates');

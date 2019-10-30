@@ -47,7 +47,7 @@ class ControlController extends Controller
             $control->save();
             DB::Commit();
             Session()->flash('my_message', 'Control Registrado Correctamente');
-            return redirect('control');
+            return redirect()->back();
         } catch (Exception $e) {
             Session()->flash('my_error', $e->getMessage());
         }
@@ -124,4 +124,5 @@ class ControlController extends Controller
         }
         //
     }
+
 }

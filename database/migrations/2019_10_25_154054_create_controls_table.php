@@ -16,7 +16,7 @@ class CreateControlsTable extends Migration
         Schema::create('controls', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date_control');
-            $table->float('amount');
+            $table->double('amount');
             $table->string('comment',100)->nullable();
             $table->timestamps();
         });

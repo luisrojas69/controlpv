@@ -28,7 +28,7 @@
 
                   <div class="col-sm-5">
 
-                    <input autofocus="true" type="date" class="form-control" min="2019-01-01" max="<?php echo date("Y-m-d");?>" value="<?php echo date("Y-m-d");?>" name="date_control" id="date_control" placeholder="Fecha de Lectura" required>
+                    <input autofocus="true" type="date" class="form-control"  value="<?php echo date("Y-m-d");?>" name="date_control" id="date_control" placeholder="Fecha de Lectura" required>
                   </div>
                 </div>
                 <div class="form-group">

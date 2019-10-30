@@ -1,9 +1,9 @@
  <!-- Logo -->
     <a href="{{ route('home') }}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>GB</b>System</span>
+      <span class="logo-mini"><b>Control</b>PV</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>GB</b>System</span>
+      <span class="logo-lg"><b>Control</b>PV</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
 
