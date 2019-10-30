@@ -28,7 +28,7 @@
               </div>
 
               <div class="modal-body">
-               <div>
+               <div class="text-center">
                   <h4 class="info_modal"></h4>
                </div>
               </div>
@@ -109,15 +109,18 @@
           <div class="box">
             <div class="box-header">
               <h3 class="box-title">Tabla Resumen - Control Hect&aacute;reas</h3>
-              
-              <div class="input-group pull-right">
-                  <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+
+              <div class="pull-right">
+                <a class="btn btn-social-icon btn-bitbucket pull-left" id="show-coordenadas"><i class="fa fa-credit-card"></i></a>
+                <a class="btn btn-default pull-right" id="daterange-btn">
                     <span>
                       <i class="fa fa-calendar"></i> Seleccione Rango de Fecha
                     </span>
                     <i class="fa fa-caret-down"></i>
-                  </button>
+                  </a>
               </div>
+
+
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -404,7 +407,16 @@
 
 </script>
 
+<script type="text/javascript">
+  $(function(){
 
+    $('#show-coordenadas').on('click', function(){
+        $('.modal-title').text('Tarjeta de Coordenandas');
+        $('.info_modal').html('<img class="img-responsive" src="{{ asset ("img/coordenadas.png") }}" alt="Tarejeta de Coordenadas">');
+        $('#modal-control').modal('show');
+    });
+  });
+</script>
 
 
 <!-- Page script -->
@@ -453,6 +465,7 @@
          },
         success: function(datos)
         {
+          $("#loading").hide();
           console.log(datos[0].total);
           var total = parseInt(datos[0].total).toFixed(2);
           var cliente= (total*0.95).toFixed(2);
